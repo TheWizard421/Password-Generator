@@ -32,16 +32,20 @@ function generatePassword() {
   console.log('Special Characters:',passwordSpecial)
   console.log(passwordcharacters)
 
-
-  return passwordVariable
+  var finalpassword = '';
+  
+  for (let i = 0; i < passwordLength; i++) {
+    finalpassword = finalpassword + passwordcharacters.charAt(Math.floor(Math.random()) * passwordLength)
+}
+return finalpassword
 }
 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  for (let i = 0; passwordcharacters; i++) {
-    writePassword += password[i] + "<br>";
-  }
+  
+
+
   passwordText.value = password;
  
 }
