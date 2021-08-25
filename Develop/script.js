@@ -35,7 +35,7 @@ function generatePassword() {
   var finalpassword = '';
   
   for (let i = 0; i < passwordLength; i++) {
-    finalpassword = finalpassword + passwordcharacters.charAt(Math.floor(Math.random()) * passwordLength)
+    finalpassword = finalpassword + passwordcharacters.charAt(Math.floor(Math.random() * passwordcharacters.length))
 }
 return finalpassword
 }
@@ -43,7 +43,6 @@ return finalpassword
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
 
 
   passwordText.value = password;
